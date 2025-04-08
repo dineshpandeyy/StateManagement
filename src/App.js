@@ -13,13 +13,13 @@ export default function App() {
 
   function handlePrevious() {
     if(step > 1) {
-      setStep(step-1)
+      setStep((s) => s - 1)
     }
   }
 
   function handleNext() {
     if(step < messages.length) {
-      setStep(step+1)
+      setStep((s) => s + 1)
     }
   }
 
@@ -29,7 +29,7 @@ export default function App() {
     // } else {
     //   setIsOpen(true)
     // }
-    setIsOpen(!isOpen)
+    setIsOpen((is) => !is)
   }
 
   return (
